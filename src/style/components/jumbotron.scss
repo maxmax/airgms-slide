@@ -242,6 +242,6 @@
     @include inline-cover()
   }
   &.slide{
-    @include inline-cover('#333', 'media/slide-1-1.jpg')
+    @include inline-cover('#333', 'media/slide.jpg')
   }
 }
