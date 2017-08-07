@@ -1,0 +1,74 @@
+//
+// Variables
+// --------------------------------------------------
+$basecolor: #333;
+$basebg: white;
+
+$font-family-reg: "Helvetica Neue",Helvetica,Arial,sans-serif;
+$font-family-bold: "Helvetica Neue",Helvetica,Arial,sans-serif;
+$font-family-bold-italic: "Helvetica Neue",Helvetica,Arial,sans-serif;
+$font-family-italic: "Helvetica Neue",Helvetica,Arial,sans-serif;
+
+@mixin vertical-align {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@mixin defmode() {
+	font-family: $font-family-reg;
+	background: $basebg;
+	//height: 100vh;
+	box-sizing: border-box;
+	position: relative;
+  padding-bottom: 145px;
+	b, strong, .bold{
+		font-family: $font-family-bold;
+	}
+	*, *:before, *:after {
+	  box-sizing: inherit;
+	}
+}
+
+//main
+@mixin main {
+  background: transparent;
+  padding-top: 36px;
+}
+
+//btn
+@mixin btn {
+  display: inline-block;
+  padding: 6px 24px;
+  font-size: 16px;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 1px;
+  background: #296496;
+}
+
+$breakpoints: (
+  "phone":        400px,
+  "tablet":       780px,
+  "tablet-wide":  1002px,
+  "desktop":      1248px,
+  "desktop-wide": 1440px
+);
+
+@mixin mq($width, $type: min) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+    @if $type == max {
+      $width: $width - 1px;
+    }
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="29px" height="33px" viewBox="0 0 29 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.1 (12002) - http://www.bohemiancoding.com/sketch -->
+    <title>shield + Path 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="shield-+-Path-3" sketch:type="MSLayerGroup">
+            <g id="shield" fill="#B4ED9E" sketch:type="MSShapeGroup">
+                <path d="M14.5,33 C14.44,33 14.381,32.989 14.325,32.968 C14.187,32.917 0.5,27.614 0.5,11.948 L0.5,0.5 C0.5,0.224 0.724,0 1,0 L28,0 C28.276,0 28.5,0.224 28.5,0.5 L28.5,11.948 C28.5,27.614 14.813,32.916 14.675,32.968 C14.619,32.989 14.56,33 14.5,33 L14.5,33 Z M1.5,1 L1.5,11.948 C1.5,25.974 12.936,31.299 14.5,31.96 C16.063,31.297 27.5,25.955 27.5,11.948 L27.5,1 L1.5,1 L1.5,1 Z" id="Shape"></path>
+            </g>
+            <path d="M9,13.6956522 L14.326087,18.5 L21.25,10" id="Path-3" stroke="#B4ED9E" sketch:type="MSShapeGroup"></path>
+        </g>
+    </g>
+</svg>

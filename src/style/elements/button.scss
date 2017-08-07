@@ -1,0 +1,37 @@
+button {
+  border: none;
+  background: #2ecc71;
+  color: white;
+  font-size: 16.5px;
+  padding: 12px 19px 13px;
+  text-decoration: none;
+  text-shadow: none;
+  box-shadow: none;
+  border-radius: 2px;
+  transition: 0.25s;
+  cursor: pointer;
+  &:hover, &:focus{
+    background: #55d98d;
+    outline: 0;
+  }
+  &.active{
+    background: #55d98d;
+    opacity: .8;
+  }
+  &.default{
+    background: #ccc;
+    color: white;
+  }
+  &.primary{
+    background: #ff5a60;
+    color: white;
+  }
+  &.info{
+    background: #BDE5F8;
+    color: #00529B;
+  }
+  &.warning{
+    color: #9F6000;
+    background-color: #FEEFB3;
+  }
+}
