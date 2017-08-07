@@ -155,7 +155,6 @@
   }
 }
 
-
 @mixin mqs($img: 'media/slide.jpg') {
   aside{
     background: url($img) center center no-repeat;
@@ -210,6 +209,13 @@
   }
 }
 
+@mixin color-icons(){
+  .partners{
+    filter: grayscale(0%);
+  }
+}
+
+
 .jumbotron-slide{
   position: relative;
   margin: 60px auto;
@@ -259,5 +265,8 @@
   }
   &.mq{
     @include mqs()
+  }
+  &.color-icons{
+    @include color-icons()
   }
 }
