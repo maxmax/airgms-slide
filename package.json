@@ -4,7 +4,8 @@
   "description": "base front kit",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [
     "gulp"
@@ -16,7 +17,6 @@
     "babelify": "^7.3.0",
     "browser-sync": "^2.18.13",
     "browserify": "^14.4.0",
-    "gh-pages": "^1.0.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-data": "^1.2.1",
@@ -33,6 +33,7 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "devDependencies": {
+    "gh-pages": "1.0.0",
     "redux-devtools": "3.4.0"
   }
 }

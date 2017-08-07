@@ -4,7 +4,7 @@
       content: "";
       display: block;
       position: absolute;
-      bottom: 30%;
+      bottom: 28%;
       transform: translate(0%, -50%);
       right: 12%;
       width: 210px;
@@ -81,7 +81,7 @@
   height: auto;
   top: inherit;
   width: 100%;
-  padding: 44px 60px;
+  padding: 44px 60px 30px 60px;
   .lead{
     font-size: 1.2em;
     font-weight: 500;
@@ -123,9 +123,9 @@
 }
 
 @mixin article-full() {
-  padding-top: 64px;
+  padding-top: 78px;
   padding-bottom: 64px;
-  min-height: 344px;
+  min-height: 358px;
   z-index: 2;
   position: relative;
 }
@@ -188,10 +188,12 @@
   @include mq('tablet-wide') {
     background: url($icons) 0 0 no-repeat;
     background-size: 100%;
+    filter: grayscale(100%);
   }
   @include mq('tablet-wide', max) {
     background: url($icons-mob) 0 0 no-repeat;
     background-size: 100%;
+    filter: grayscale(100%);
   }
 }
 
