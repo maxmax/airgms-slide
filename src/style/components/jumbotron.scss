@@ -155,6 +155,19 @@
   }
 }
 
+
+@mixin mqs($img: 'media/slide.jpg') {
+  aside{
+    background: url($img) center center no-repeat;
+    background-size: cover;
+    @include shadow-layer();
+    .lead{
+      z-index: 2;
+      position: relative;
+    }
+  }
+}
+
 @mixin inline() {
   @include security-icon('img/security2.svg');
   article{
@@ -243,5 +256,8 @@
   }
   &.slide{
     @include inline-cover('#333', 'media/slide.jpg')
+  }
+  &.mq{
+    @include mqs()
   }
 }
