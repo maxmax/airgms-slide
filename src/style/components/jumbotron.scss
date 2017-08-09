@@ -160,7 +160,7 @@
     background: url($img) center center no-repeat;
     background-size: cover;
     @include shadow-layer();
-    .lead{
+    .lead, button{
       z-index: 2;
       position: relative;
     }

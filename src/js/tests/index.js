@@ -5,11 +5,102 @@ import Animal from "./animal";
 import Lion from "./lion";
 import Template from "./template";
 import Sub from "./sub";
+import Bar from "./bar";
+
+import {
+  square,
+  counterValue,
+  resultValue,
+  counterThree,
+  isOutput,
+  whatOutput,
+  whatValue,
+  sevenValue,
+  eightValue,
+  shouldToString,
+  whatIs,
+  whatIsOutput,
+  twelveResult,
+  whatExecuted,
+  fourteenOutput,
+  fifteenOutput,
+  sixteenOutput,
+  sumArguments,
+  sumArgumentsSecond,
+  eighteenth,
+  nineteenth,
+  twentieth,
+  twentyOne,
+  twentyTwo,
+  twentyThree,
+  twentyFour,
+  twentyFive,
+  twentySix,
+  twentySeven,
+  twentyEight,
+  twentyNine,
+  thirtyOutput,
+  thirtyOne,
+  thirtyTwo,
+  thirtyThree,
+  thirtyFour,
+  thirtyFive} from "./base";
+
+const resultColor = "background: green; color: white"
+const errorColor = "background: red; color: white"
+
+console.log("square:", square(11));
+
+console.log("1. What is the value of counter after executing the following piece of code? :", counterValue(10));
+console.log("2. What is the value of result? :", resultValue());
+console.log("3. What is the value of result? :", counterThree());
+console.log("4. What is the output? :", isOutput());
+console.log("5. What is the output? :", whatOutput());
+console.log("6. What is the value of a, b? :", sevenValue(['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']));
+console.log("7. What is the value of result? :", sevenValue());
+console.log("8. What is the value of result? :", eightValue());
+console.log("9. What should the toString function be?  to print 'I Amory Blaine am 102 years old.' :", shouldToString());
+console.log("10. What is the value of result? :", whatIs());
+console.log("11. What is the output? :", whatIsOutput());
+console.log("12. What is the value of result? :", twelveResult());
+console.log("13. What is the value of child.b after this piece of code is executed? :", whatExecuted());
+console.log("14. What is the output? :", fourteenOutput());
+console.log("15. What is the output? :", fifteenOutput());
+console.log("16. What is the output? :", sixteenOutput());
+console.log("%c 17. Complete the implementation of this method so that it returns the sum of its arguments. :", resultColor, sumArguments(1,2,3,4));
+console.log("%c 17.2 sumArgumentsSecond. :", resultColor, sumArgumentsSecond(0,1,2,3,4));
+console.log("18. What is the value of result? :", eighteenth());
+console.log("19. What is the value of result? :", nineteenth());
+console.log("%c 20. What is the output? :", errorColor, twentieth());
+console.log("21. What is the value of results? :", twentyOne());
+console.log("22. What is the output? :", twentyTwo());
+console.log("23. What is the output? :", twentyThree());
+console.log("24. What is the output? :", twentyFour());
+console.log("25. What is the output? :", twentyFive());
+console.log("26. What is the value of pie? :", twentySix());
+console.log("27. What is the output? :", twentySeven());
+console.log("28. What is the output? :", twentyEight());
+console.log("29. What is the output? :", twentyNine());
+console.log("30. What is the output? :", thirtyOutput());
+console.log("31. What is the value of message? :", thirtyOne());
+console.log("32. What is the value of matches? :", thirtyTwo());
+console.log("%c 33. What is the output? :", errorColor, thirtyThree());
+console.log("33. What is the output? :", thirtyFour());
+console.log("35. What is the output? :", thirtyFive());
+
+console.log("=====================//=====================");
+
+//Show more
 
 let person = new Person("Ram", "Kulkarni");
 console.log("Person", person);
-
 //console.log("Sub", Sub());
+
+//Component
+const intbar = document.querySelector('#actTest');
+const see = document.querySelector('[data-role="see"]');
+const mainbar = new Bar('ololo', intbar, see);
+mainbar.speak();
 
 //
 let template = new Template();
@@ -61,26 +152,16 @@ let promise = new Promise((resolve) => {
 });
 
 promise.then((result) => console.log(result));
+//
 
 //Parameters by default
 let getFinalPrice = (price, tax = 0.7) => price + price * tax;
 getFinalPrice(500); // 850, так как значение tax не задано
 
 getFinalPrice(500, 0.2); // 600, значение tax по-умолчанию заменяется на 0.2
+//
 
 //Redux
-/**
- * This is a reducer, a pure function with (state, action) => state signature.
- * It describes how an action transforms the state into the next state.
- *
- * The shape of the state is up to you: it can be a primitive, an array, an object,
- * or even an Immutable.js data structure. The only important part is that you should
- * not mutate the state object, but return a new object if the state changes.
- *
- * In this example, we use a `switch` statement and strings, but you can use a helper that
- * follows a different convention (such as function maps) if it makes sense for your
- * project.
- */
 
 function counter(state = 0, action) {
   switch (action.type) {
@@ -100,12 +181,6 @@ let store = createStore(
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 )
 
-//console.log("store", store.getState());
-
-// You can use subscribe() to update the UI in response to state changes.
-// Normally you'd use a view binding library (e.g. React Redux) rather than subscribe() directly.
-// However it can also be handy to persist the current state in the localStorage.
-
 store.subscribe(() =>
   console.log("subscribe:", store.getState())
 )
@@ -120,17 +195,5 @@ store.dispatch({ type: 'DECREMENT' })
 // 1
 store.dispatch({ type: 'INCREMENT' })
 store.dispatch({ type: 'INCREMENT' })
-
-//Events
-
-//Atr
-var app = document.getElementById("root");
-//const status = document.body.getAttribute('role')
-console.log("status atr", app);
-
-document.getElementById('testButton').onclick = function() {
-  this.classList.toggle('active');
-  store.dispatch({ type: 'INCREMENT' });
-}
 
 console.log("End tests!");

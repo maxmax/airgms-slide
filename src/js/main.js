@@ -1,4 +1,4 @@
-//import Tests from "./tests/";
+import Tests from "./tests/";
 
 console.log("Mount");
 
